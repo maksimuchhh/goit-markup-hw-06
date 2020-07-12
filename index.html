@@ -44,7 +44,7 @@
   <main>
     <section class="hero-section">
       <h1 class="hero-header">Эффективные решения для вашего бизнеса</h1>
-      <a class="hero-link button link" href="">Заказать услугу</a>
+      <button class="hero-button button" data-modal-open>Заказать услугу</button>
     </section>
     <section class="our-advantages">
       <div class="container">
@@ -360,14 +360,76 @@
           </ul>
         </li>
         <li>
-          <h3 class="subscribe">Подпишитесь на рассылку</h3>
-          <input type="text" placeholder="E-mail" name="Email" id="Email-input" />
-          <input type="submit" value="Подписаться" />
+          <p class="subscribe">Подпишитесь на рассылку</p>
+          <input class="footer-email-input" type="text" placeholder="E-mail" name="Email" id="Email-input" />
+          <input class="footer-submit" type="submit" value="Подписаться" />
         </li>
       </ul>
       <p class="copyright">2020 | Developed by GoIT Students</p>
     </div>
   </footer>
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+      <button class="modal-close-button" data-modal-close><svg class="crosshair-icon">
+          <use href="./images/crosshair.svg#crosshair">
+          </use>
+        </svg></button>
+      <div class="modal-wrapper">
+        <p class="modal-header">Оставьте свои данные, мы вам перезвоним</p>
+        <div class="modal-form-container">
+
+          <input class="modal-input" name="Name" id="name" type="text" placeholder=" " required />
+          <label class="modal-label" for="name">Имя</label>
+          <svg class="modal-icon">
+            <use href="./images/person.svg#person">
+            </use>
+          </svg>
+        </div>
+        <div class="modal-form-container">
+          <input class="modal-input" name="Phone" id="phone" type="text" placeholder=" " required />
+          <label class="modal-label" for="phone">Телефон</label>
+          <svg class=" modal-icon">
+            <use href="./images/phone.svg#phone">
+            </use>
+          </svg>
+        </div>
+        <div class="modal-form-container">
+          <input class="modal-input" name="Mail" id="mail" type="text" placeholder=" " required />
+          <label class="modal-label" for="mail">Почта</label>
+          <svg class="modal-icon">
+            <use href="./images/email.svg#email">
+            </use>
+          </svg>
+        </div>
+        <div class="modal-form-container modal-text-area-container">
+
+          <textarea class="modal-input modal-text-area" placeholder=" " id="comment" name="Comment"></textarea>
+          <label class="modal-label modal-text-area-label" for="comment">Комментарий</label>
+        </div>
+        <div class="modal-checkbox-container">
+          <div class="checkbox-icon-container"><input class="modal-checkbox" type="checkbox" name="license"
+              id="license">
+
+
+            <label class="modal-checkbox-label" for="license">Соглашаюсь с рассылкой и принимаю <a class="license-link"
+                href="/">Условия
+                договора</a></label>
+            <svg class="checkbox-icon">
+              <use href="./images/icon-check.svg#icon-check">
+              </use>
+            </svg>
+          </div>
+
+
+
+        </div>
+        <input class="submit" type="submit" value="Отправить">
+
+
+      </div>
+    </div>
+  </div>
+  <script src="./modal.js"></script>
 </body>
 
 </html>
