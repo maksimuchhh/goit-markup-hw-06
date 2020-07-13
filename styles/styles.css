@@ -621,7 +621,13 @@ address {
   border-radius: 4px;
   margin-right: 12px;
 }
+.footer-form {
+  display: flex;
+}
 .footer-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 200px;
   height: 50px;
 
@@ -629,12 +635,16 @@ address {
   font-weight: bold;
   font-size: 16px;
   line-height: 1.875;
+  letter-spacing: 0.96px;
 
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
   cursor: pointer;
+}
+.footer-submit-icon {
+  margin-left: 10px;
 }
 
 .copyright {
@@ -647,6 +657,12 @@ address {
   margin-top: 18px;
   padding-bottom: 21px;
 }
+
+/*
+
+MODAL
+
+*/
 
 .backdrop {
   position: fixed;
@@ -682,6 +698,9 @@ address {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1) transform;
 }
 .modal-close-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   right: 8px;
   top: 8px;
   position: absolute;
@@ -692,9 +711,6 @@ address {
   cursor: pointer;
 }
 .crosshair-icon {
-  position: absolute;
-  top: 9px;
-  left: 8px;
   width: 11px;
   height: 11px;
 }
@@ -748,7 +764,8 @@ address {
   outline: none;
   cursor: pointer;
 }
-.modal-input:focus-within ~ .modal-label {
+.modal-input:not(:placeholder-shown) ~ .modal-label,
+.modal-input:focus ~ .modal-label {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: color, transform;
   transform: translate(-25px, -30px);
@@ -768,6 +785,7 @@ address {
 .modal-text-area-label {
   left: 16px;
 }
+.modal-text-area:not(:placeholder-shown) ~ .modal-text-area-label,
 .modal-text-area:focus-within ~ .modal-text-area-label {
   transform: translate(0, -30px);
 }
@@ -796,7 +814,7 @@ address {
   content: "";
   width: 16px;
   height: 16px;
-  border: solid var(--primary-text-color);
+  border: solid var(--primary-text-color) 2px;
   border-radius: 2px;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: background-color, border-color;
