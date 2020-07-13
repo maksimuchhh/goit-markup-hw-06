@@ -249,9 +249,16 @@
           </ul>
         </li>
         <li>
+
           <p class="subscribe">Подпишитесь на рассылку</p>
-          <input class="footer-email-input" type="text" placeholder="E-mail" name="Email" id="Email-input" />
-          <input class="footer-submit" type="submit" value="Подписаться" />
+          <form class="footer-form">
+            <input class="footer-email-input" type="email" placeholder="E-mail" name="Email" id="Email-input" />
+            <button class="footer-submit" type="submit">Подписаться <svg class="footer-submit-icon" width="24px"
+                height="24px">
+                <use href="./images/icon-send.svg#icon-send">
+                </use>
+              </svg></button>
+          </form>
         </li>
       </ul>
       <p class="copyright">2020 | Developed by GoIT Students</p>
